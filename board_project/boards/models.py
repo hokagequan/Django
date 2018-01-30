@@ -17,6 +17,7 @@ class Topic(models.Model):
 class Post(models.Model):
 	"""docstring for Post"""
 	message = models.TextField(max_length=4000)
+	topic = models.ForeignKey(Topic, related_name='posts', on_delete=True, null=True)
 	created_at = models.DateTimeField(auto_now_add=True)
 	updated_at = models.DateTimeField(null=True)
 	created_by = models.ForeignKey(User, related_name='posts', on_delete=False)
