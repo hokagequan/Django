@@ -7,4 +7,5 @@ def home(request):
 
 def packages(request):
 	packages = file_core.get_all_packages()
+	
 	return render(request, "package.html", {"packages": packages})
