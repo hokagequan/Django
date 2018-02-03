@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block breadcrumb %}
+	<li class="breadcrumb-item active">Home</li>
+{% endblock breadcrumb %}
+
+{% block content %}
+	<table class="table">
+		<tbody>
+			<tr>
+				<td><a href="{% url "packages" %}">升级包</a></td>
+			</tr>
+			<tr>
+				<td><a href="">安装包</a></td>
+			</tr>
+		</tbody>
+	</table>
+{% endblock content %}
