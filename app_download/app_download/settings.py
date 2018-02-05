@@ -132,3 +132,4 @@ MEDIA_ROOT = "/Users/Q/Downloads/"
 MEDIA_URL = '/media/'
 
 LOGOUT_REDIRECT_URL = "home"
+LOGIN_REDIRECT_URL = "home"
