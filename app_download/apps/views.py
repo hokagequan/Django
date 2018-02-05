@@ -9,3 +9,7 @@ def packages(request):
 	packages = file_core.get_all_packages()
 	
 	return render(request, "package.html", {"packages": packages})
+
+def exes(request):
+	setups = file_core.get_all_setups()
+	return render(request, "exe.html", {"list": setups})
