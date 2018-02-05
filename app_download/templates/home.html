@@ -5,14 +5,18 @@
 {% endblock breadcrumb %}
 
 {% block content %}
-	<table class="table">
-		<tbody>
-			<tr>
-				<td><a href="{% url "packages" %}">升级包</a></td>
-			</tr>
-			<tr>
-				<td><a href="{% url "setups" %}">安装包</a></td>
-			</tr>
-		</tbody>
-	</table>
+	{% if user.is_authenticated %}
+		<table class="table">
+			<tbody>
+				<tr>
+					<td><a href="{% url "packages" %}">升级包</a></td>
+				</tr>
+				<tr>
+					<td><a href="{% url "setups" %}">安装包</a></td>
+				</tr>
+			</tbody>
+		</table>
+	{% else %}
+		<h2 class="text-muted text-center">请先登录后再玩耍</h2>
+	{% endif %}
 {% endblock content %}
