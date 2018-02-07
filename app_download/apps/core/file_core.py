@@ -5,6 +5,7 @@ from ..models import AppFile
 import os
 
 def get_files(folder):
+	# import pdb; pdb.set_trace()
 	rel = list()
 	fs = FileSystemStorage()
 	files = os.listdir(path.join(settings.MEDIA_ROOT, folder))
@@ -17,7 +18,7 @@ def get_files(folder):
 	return rel
 
 def get_all_packages():
-	get_files("packages")
+	return get_files("packages")
 
 def get_all_setups():
-	get_files("setups")
+	return get_files("setups")

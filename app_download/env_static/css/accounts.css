@@ -1,0 +1,8 @@
+body {
+	background-image: url("../img/weather.png");
+}
+
+.logo a {
+	color: rgba(100,100,100,0.9);
+}
+
